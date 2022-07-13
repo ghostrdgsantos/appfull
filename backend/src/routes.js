@@ -11,6 +11,10 @@ routes.post('/sessions', SessionController.create);
 
 routes.get('/instituicoes', InstituicoesController.index);
 routes.post('/instituicoes', InstituicoesController.create);
+routes.delete('/instituicoes/:id', InstituicoesController.delete);
+routes.put('/instituicoes/:id', InstituicoesController.put);
+
+
 
 routes.get('/profile', ProfileController.index);
 

@@ -8,7 +8,7 @@ module.exports = {
     
 
     const necessidades = await connection('necessidades')
-      .join('instituicoes', 'inst_id', '=', 'necessidades.inst_id')
+      .join('instituicoes', 'instituicoes.id', '=', 'necessidades.inst_id')
       .limit(5)
       .offset((page - 1) * 5)
       .select([
@@ -56,5 +56,7 @@ module.exports = {
 
     return response.status(204).send();
   }
+
+ 
 
 };
